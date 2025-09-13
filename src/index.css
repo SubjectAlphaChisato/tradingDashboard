@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f1419;
+  color: #ffffff;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  color: #a0a0a0;
+  font-size: 1rem;
+}
+
+.tabs-container {
+  background: #1a1f2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-header {
+  display: flex;
+  background: #252b3a;
+  border-bottom: 1px solid #3a4553;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+  background: #2a3142;
+  color: #ffffff;
+}
+
+.tab-button.active {
+  color: #00d4aa;
+  border-bottom-color: #00d4aa;
+  background: #1a1f2e;
+}
+
+.tab-content {
+  padding: 2rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: #252b3a;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #3a4553;
+  transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  border-color: #00d4aa;
+}
+
+.metric-label {
+  color: #a0a0a0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.metric-value.positive {
+  color: #00d4aa;
+}
+
+.metric-value.negative {
+  color: #ff6b6b;
+}
+
+.refresh-indicator {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #252b3a;
+  border-radius: 6px;
+  border: 1px solid #3a4553;
+  color: #a0a0a0;
+  font-size: 0.875rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #a0a0a0;
+}
+
+.error {
+  text-align: center;
+  padding: 3rem;
+  color: #ff6b6b;
+}
+
